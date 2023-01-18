@@ -1,0 +1,61 @@
+3. Program using classes and objects (Program to get data members[attribute-name, company, age] and display using member functions)
+
+ #include <iostream>
+using namespace std;
+
+class Employee{
+public:
+    string Name;
+    string Company;
+    int age;
+    
+    void intro()
+    {
+        cout<<"Hello my name is "<< Name <<", Im intern at " << Company << " and my age is " << age; 
+    }
+
+};
+
+int main()
+{
+    Employee obj;
+    obj.Name="kalam";
+    obj.Company="Ideassion";
+    obj.age= 23;
+    
+    obj.intro();
+}
+
+// Same program using created user-defined CONSTRUCTOR
+
+#include <iostream>
+using namespace std;
+
+class Employee{
+public:
+    string Name;
+    string Company;
+    int Age;
+    
+    void intro()
+    {
+        cout<<"Hello my name is "<< Name <<", Im intern at " << Company << " and my age is " << Age<<endl; 
+    }
+    
+    Employee(string name, string company, int age){
+        Name = name;
+        Company = company;
+        Age = age;
+    }
+
+};
+
+int main()
+{
+    Employee obj = Employee("Kalam", "Ideassion", 23);
+    obj.intro();
+    
+    Employee obj1 = Employee("Ibrahim", "Ideassion", 24);
+    obj1.intro();
+    
+}
